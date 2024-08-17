@@ -33,7 +33,6 @@ jaxlib==0.4.31
 Jinja2==3.1.4
 keyboard==0.13.5
 kiwisolver==1.4.5
-llvmlite==0.41.1
 lxml==5.2.2
 MarkupSafe==2.1.5
 matplotlib==3.9.1
