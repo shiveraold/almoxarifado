@@ -627,3 +627,73 @@ body {
     background-color: #5a6268;
 }
 
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Centralizar a logo e o menu de navegação */
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    /* Formulários e botões */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    /* Centralizar e ajustar o conteúdo */
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    /* Ajustar imagens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustar os gráficos do dashboard */
+    canvas {
+        max-width: 100%;
+    }
+}
