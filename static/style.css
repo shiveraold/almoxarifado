@@ -1,1 +1,629 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o html e body ocupem 100% da altura da viewport */
+}
+
+body {
+    background-image: url('/static/casa.png'); /* Caminho para sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    min-height: 100vh; /* Garante que o body cubra pelo menos 100% da viewport */
+}
+
+.navbar {
+    background-color: #171928;
+    padding: 15px 20px;
+    color: white;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/static/casa.png") no-repeat center center/cover;
+    filter: blur(2px); /* Aplicando o desfoque */
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+/* Estilos gerais (aplicados em todas as páginas) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page-adicionar, .page-adicionar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-adicionar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo seja centralizado verticalmente */
+}
+
+.page-adicionar .form-wrapper {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.page-adicionar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-adicionar .form-group {
+    margin-bottom: 15px;
+}
+
+.page-adicionar .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-adicionar .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.page-adicionar .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.page-adicionar .btn-primary:hover {
+    background-color: #218838;
+}
+/* Estilos gerais (aplicados em todas as páginas) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilos específicos para a página "Adicionar Item" */
+.page-adicionar, .page-adicionar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-adicionar .container,
+.page-pesquisar .container { /* Reutilizando para centralizar também a página de pesquisa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-adicionar .form-wrapper,
+.page-pesquisar .form-wrapper { /* Reutilizando estilos */
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.page-adicionar h1,
+.page-pesquisar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-adicionar .form-group,
+.page-pesquisar .form-group {
+    margin-bottom: 15px;
+}
+
+.page-adicionar .form-group label,
+.page-pesquisar .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-adicionar .form-group input,
+.page-pesquisar .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.page-adicionar .btn-primary,
+.page-pesquisar .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.page-adicionar .btn-primary:hover,
+.page-pesquisar .btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Estilos gerais (aplicados em todas as páginas) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilos específicos para a página "Adicionar Item" */
+.page-adicionar, .page-adicionar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Listar Itens" */
+.page-listar, .page-listar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Pesquisar Itens" */
+.page-pesquisar, .page-pesquisar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralização e formatação compartilhada */
+.page-adicionar .container,
+.page-pesquisar .container,
+.page-listar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-adicionar .form-wrapper,
+.page-pesquisar .form-wrapper,
+.page-listar .form-wrapper {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.page-adicionar h1,
+.page-pesquisar h1,
+.page-listar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-adicionar .form-group,
+.page-pesquisar .form-group,
+.page-listar .form-group {
+    margin-bottom: 15px;
+}
+
+.page-adicionar .form-group label,
+.page-pesquisar .form-group label,
+.page-listar .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-adicionar .form-group input,
+.page-pesquisar .form-group input,
+.page-listar .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.page-adicionar .btn-primary,
+.page-pesquisar .btn-primary,
+.page-listar .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.page-adicionar .btn-primary:hover,
+.page-pesquisar .btn-primary:hover,
+.page-listar .btn-primary:hover {
+    background-color: #218838;
+}
+/* Estilos gerais (aplicados em todas as páginas) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilos específicos para a página "Adicionar Item" */
+.page-adicionar, .page-adicionar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Listar Itens" */
+.page-listar, .page-listar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Pesquisar Itens" */
+.page-pesquisar, .page-pesquisar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Remover Item" */
+.page-remover, .page-remover html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralização e formatação compartilhada */
+.page-adicionar .container,
+.page-pesquisar .container,
+.page-listar .container,
+.page-remover .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-adicionar .form-wrapper,
+.page-pesquisar .form-wrapper,
+.page-listar .form-wrapper,
+.page-remover .form-wrapper {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.page-adicionar h1,
+.page-pesquisar h1,
+.page-listar h1,
+.page-remover h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-adicionar .form-group,
+.page-pesquisar .form-group,
+.page-listar .form-group,
+.page-remover .form-group {
+    margin-bottom: 15px;
+}
+
+.page-adicionar .form-group label,
+.page-pesquisar .form-group label,
+.page-listar .form-group label,
+.page-remover .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-adicionar .form-group input,
+.page-pesquisar .form-group input,
+.page-listar .form-group input,
+.page-remover .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.page-adicionar .btn-primary,
+.page-pesquisar .btn-primary,
+.page-listar .btn-primary,
+.page-remover .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.page-adicionar .btn-primary:hover,
+.page-pesquisar .btn-primary:hover,
+.page-listar .btn-primary:hover,
+.page-remover .btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Estilos gerais (aplicados em todas as páginas) */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Estilos específicos para a página "Adicionar Item" */
+.page-adicionar, .page-adicionar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Listar Itens" */
+.page-listar, .page-listar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Pesquisar Itens" */
+.page-pesquisar, .page-pesquisar html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Remover Item" */
+.page-remover, .page-remover html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Quantidade de Itens" */
+.page-quantidade, .page-quantidade html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para a página "Dashboard" */
+.page-dashboard, .page-dashboard html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralização e formatação compartilhada */
+.page-adicionar .container,
+.page-pesquisar .container,
+.page-listar .container,
+.page-remover .container,
+.page-quantidade .container,
+.page-dashboard .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page-adicionar .form-wrapper,
+.page-pesquisar .form-wrapper,
+.page-listar .form-wrapper,
+.page-remover .form-wrapper,
+.page-quantidade .form-wrapper,
+.page-dashboard .form-wrapper {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ajuste para páginas com conteúdo maior */
+    width: 100%;
+}
+
+.page-adicionar h1,
+.page-pesquisar h1,
+.page-listar h1,
+.page-remover h1,
+.page-quantidade h1,
+.page-dashboard h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-adicionar .form-group,
+.page-pesquisar .form-group,
+.page-listar .form-group,
+.page-remover .form-group,
+.page-quantidade .form-group,
+.page-dashboard .form-group {
+    margin-bottom: 15px;
+}
+
+.page-adicionar .form-group label,
+.page-pesquisar .form-group label,
+.page-listar .form-group label,
+.page-remover .form-group label,
+.page-quantidade .form-group label,
+.page-dashboard .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-adicionar .form-group input,
+.page-pesquisar .form-group input,
+.page-listar .form-group input,
+.page-remover .form-group input,
+.page-quantidade .form-group input,
+.page-dashboard .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.page-adicionar .btn-primary,
+.page-pesquisar .btn-primary,
+.page-listar .btn-primary,
+.page-remover .btn-primary,
+.page-quantidade .btn-primary,
+.page-dashboard .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.page-adicionar .btn-primary:hover,
+.page-pesquisar .btn-primary:hover,
+.page-listar .btn-primary:hover,
+.page-remover .btn-primary:hover,
+.page-quantidade .btn-primary:hover,
+.page-dashboard .btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 6px 12px; /* Tamanho reduzido do padding */
+    background-color: #6c757d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.85rem; /* Tamanho da fonte menor */
+    border-radius: 4px; /* Bordas arredondadas */
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
 
