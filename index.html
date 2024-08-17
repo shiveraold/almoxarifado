@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almoxarifado Casa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="logo">Almoxarifado Casa</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('adicionar') }}">Adicionar Item</a></li>
+                <li><a href="{{ url_for('listar') }}">Listar Itens</a></li>
+                <li><a href="{{ url_for('pesquisar') }}">Pesquisar</a></li>
+                <li><a href="{{ url_for('remover') }}">Remover Item</a></li>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('quantidade') }}">Quantidade</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Organize sua Casa com Facilidade</h1>
+            <p>Mantenha o controle de onde estão suas coisas e acesse-as com rapidez.</p>
+            <a href="{{ url_for('adicionar') }}" class="btn-primary">Comece Agora</a>
+        </div>
+    </header>
+</body>
+</html>

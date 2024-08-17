@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Itens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page-listar">
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Listar Itens por Caixa</h1>
+            <form action="{{ url_for('listar') }}" method="POST">
+                <div class="form-group">
+                    <label for="caixa">Informe a Caixa:</label>
+                    <input type="text" id="caixa" name="caixa" required>
+                </div>
+                <button type="submit" class="btn-primary">Listar Itens</button>
+            </form>
+
+            {% if itens %}
+            <h2>Itens na Caixa {{ caixa }}</h2>
+            <ul>
+                {% for item in itens %}
+                <li>Código: {{ item['Código'] }}, Item: {{ item['Item'] }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <a href="{{ url_for('index') }}" class="btn-secondary">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>

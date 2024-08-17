@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page-dashboard">
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Dashboard de Itens</h1>
+            <img src="{{ image }}" alt="Gráfico de Itens por Caixa" style="max-width: 100%;">
+            <a href="{{ url_for('index') }}" class="btn-primary">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>

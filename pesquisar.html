@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Itens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="page-pesquisar">
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Pesquisar Itens</h1>
+            <form action="{{ url_for('pesquisar') }}" method="POST">
+                <div class="form-group">
+                    <label for="palavra_chave">Palavra-chave:</label>
+                    <input type="text" id="palavra_chave" name="palavra_chave" required>
+                </div>
+                <button type="submit" class="btn-primary">Pesquisar</button>
+            </form>
+
+            {% if resultado %}
+            <h2>Resultados da Pesquisa</h2>
+            <ul>
+                {% for item in resultado %}
+                <li>Código: {{ item['Código'] }}, Caixa: {{ item['Caixa'] }}, Item: {{ item['Item'] }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <a href="{{ url_for('index') }}" class="btn-secondary">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>
